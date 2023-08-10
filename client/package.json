@@ -8,8 +8,7 @@
     "build-only": "vite build",
     "dev": "vite",
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
-    "preview": "vite preview",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@vue/cli-shared-utils": "^5.0.8",
