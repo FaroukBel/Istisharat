@@ -13,9 +13,11 @@ body{
 
   
 }
-.arabic-font{
-  font-family: Tajawal,sans-serif;
-}
+
 .english-font{
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat,sans-serif !important;
+}
+
+.arabic-font{
+   font-family: 'Cairo', sans-serif !important;
 }

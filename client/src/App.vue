@@ -52,11 +52,10 @@ const toggleLanguage = () => {
             <b-nav-item href="#">{{ $t("itemMenu4", {}, { locale: lang }) }}</b-nav-item>
           </b-navbar-nav>
 
-          <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto ">
             <b-nav-item @click="toggleLanguage">{{ lang === 'en' ? 'العربية' : 'English' }}</b-nav-item>
-            <b-nav-item href="#">Profile</b-nav-item>
-            <b-nav-item href="#">Sign Out</b-nav-item>
+            <b-nav-item href="#">{{ $t("signIn", {}, { locale: lang }) }}</b-nav-item>
+            <b-nav-item href="#">{{ $t("signUp", {}, { locale: lang }) }}</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

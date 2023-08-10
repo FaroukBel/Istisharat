@@ -31,20 +31,26 @@ const i18n = createI18n({
             hello:"Hello world",
             home:"Home",
             itemMenu2:"Therapists",
-            itemMenu3:"Psychometer",
+            itemMenu3:"Specializations",
             itemMenu4:"Blog",
+            signUp:"Sign Up",
+            signIn:"Sign In",
             HomeTitle:"Talk to your specialist online privately anytime anywhere!",
             HomeTitle2:"And book your appointment for free with ease",
+            section2Title:"THE ONES WHO'S SPECIALIZED",
             HomeButtom:"Find your specialist!"
         },
         ar:{
             hello:"مرحبا",
             home:"الصفحة الرئيسية",
             itemMenu2:"المعالجين",
-            itemMenu3:"الإختبارات النفسية",
+            itemMenu3:"التخصصات",
             itemMenu4:"المدونة",
-            HomeTitle:"ابحث عن أخصائي",
+            signUp:"إنشاء حساب",
+            signIn:"تسجيل الدخول",
+            HomeTitle:"تحدث مع أخصائيك بشكل خاص في أي وقت وأي مكان!",
             HomeTitle2:"و احجز موعدك مجانا بكل سهولة",
+            section2Title:"الأشخاص المتخصصون",
             HomeButtom:"اكتشف أخصائيين"
 
        
