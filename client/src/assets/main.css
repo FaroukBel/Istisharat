@@ -1,0 +1,19 @@
+@import './base.css';
+
+.navbar{
+}
+.navbar a{
+  font-size: 20px;
+}
+
+.rtl{
+  direction: rtl;
+
+  
+}
+.arabic-font{
+  font-family: Tajawal,sans-serif;
+}
+.english-font{
+  font-family: Montserrat,sans-serif;
+}
