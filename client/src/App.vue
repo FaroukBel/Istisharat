@@ -2,7 +2,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useStore } from './stores/langStore'; // Update the path accordingly
-import HomeView from './views/HomeView.vue';
+import { VueScrollFixedNavbar } from "vue-scroll-fixed-navbar";
+
 
 const lang = ref('ar');
 const store = useStore();
@@ -24,6 +25,12 @@ const toggleLanguage = () => {
 <style scoped>
 .wrapper {
   box-shadow: 0 0 20px #d7d7d7;
+  margin-top: 100px;
+  
+}
+.fixed-nav{
+
+  box-shadow: 0 0 20px #d7d7d7;
 }
 </style>
 
@@ -31,12 +38,13 @@ const toggleLanguage = () => {
 <template>
   <header>
     <div class="wrapper" :class="{ 'rtl': lang === 'ar' }">
-      <b-navbar toggleable="lg" class="px-5 bg-white" variant="info">
+      <VueScrollFixedNavbar class="fixed-nav">
+        <b-navbar  toggleable="lg" class="px-5 sticky bg-white" variant="">
         <b-navbar-brand href="#">Istisharat</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-        <b-collapse id="nav-collapse" class="justify-content-around" is-nav>
+        <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <b-nav-item href="#">{{ $t("home", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="#">{{ $t("itemMenu2", {}, { locale: lang }) }}</b-nav-item>
@@ -52,6 +60,8 @@ const toggleLanguage = () => {
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
+      </VueScrollFixedNavbar>
+      
     </div>
   </header>
   <RouterView />

@@ -1,7 +1,9 @@
 @import './base.css';
 
-.navbar{
+body{
+  background-color: aliceblue !important;
 }
+
 .navbar a{
   font-size: 20px;
 }
