@@ -45,14 +45,14 @@ const toggleLanguage = () => {
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
+          <b-navbar-nav class="w-100 justify-content-center">
             <b-nav-item href="#">{{ $t("home", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="#">{{ $t("itemMenu2", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="#">{{ $t("itemMenu3", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="#">{{ $t("itemMenu4", {}, { locale: lang }) }}</b-nav-item>
           </b-navbar-nav>
 
-          <b-navbar-nav class="ml-auto ">
+          <b-navbar-nav class="ml-auto w-100 justify-content-end ">
             <b-nav-item @click="toggleLanguage">{{ lang === 'en' ? 'العربية' : 'English' }}</b-nav-item>
             <b-nav-item href="#">{{ $t("signIn", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="#">{{ $t("signUp", {}, { locale: lang }) }}</b-nav-item>

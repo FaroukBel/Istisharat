@@ -17,7 +17,7 @@ const lang = store.lang;
         <div class="row">
           <div class="col-md-6 d-flex flex-column align justify-content-center">
             <h1 class="home-title">{{ $t("HomeTitle", {}, { locale: lang }) }}</h1>
-            <h2 style="margin-top: 10px; font-size: 40px;">{{ $t("HomeTitle2", {}, { locale: lang }) }}</h2>
+            <h2 class="home-subtitle" >{{ $t("HomeTitle2", {}, { locale: lang }) }}</h2>
             <button class="main-button" style="margin-top: 40px;">
               {{ $t("HomeButtom", {}, { locale: lang }) }}
             </button>
@@ -36,12 +36,11 @@ const lang = store.lang;
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-3 d-flex justify-content-center">
+          <div class="col-md-4 col-lg-3 d-flex justify-content-center">
             <div class="card">
               <div class="card-head d-flex align-items-center ">
                 <div class="specialist-img">
                   <img src="" />
-
 
                 </div>
                 <div>
@@ -59,29 +58,7 @@ const lang = store.lang;
               <button class="card-button">More info</button>
             </div>
           </div>
-          <div class="col-md-3 d-flex justify-content-center">
-            <div class="card">
-              <div class="card-head d-flex align-items-center ">
-                <div class="specialist-img">
-                  <img src="" />
-
-
-                </div>
-                <div>
-                  <p class="text-title mx-4">Name</p>
-                  <p class="mx-4">Speciality</p>
-
-                </div>
-              </div>
-              <div class="card-details">
-                <p class="text-body">Description Lorem Ipsum Description Lorem Ipsum Description Lorem Ipsum Description
-                  Lorem Ipsum </p>
-
-              </div>
-              <button class="card-button">More info</button>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex justify-content-center">
+          <div class="col-md-4 col-lg-3 d-flex justify-content-center">
             <div class="card">
               <div class="card-head d-flex align-items-center ">
                 <div class="specialist-img">
@@ -103,7 +80,29 @@ const lang = store.lang;
               <button class="card-button">More info</button>
             </div>
           </div>
-          <div class="col-md-3 d-flex justify-content-center">
+          <div class="col-md-4 col-lg-3 d-flex justify-content-center">
+            <div class="card">
+              <div class="card-head d-flex align-items-center ">
+                <div class="specialist-img">
+                  <img src="" />
+
+
+                </div>
+                <div>
+                  <p class="text-title mx-4">Name</p>
+                  <p class="mx-4">Speciality</p>
+
+                </div>
+              </div>
+              <div class="card-details">
+                <p class="text-body">Description Lorem Ipsum Description Lorem Ipsum Description Lorem Ipsum Description
+                  Lorem Ipsum </p>
+
+              </div>
+              <button class="card-button">More info</button>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 d-flex justify-content-center">
             <div class="card">
               <div class="card-head d-flex align-items-center ">
                 <div class="specialist-img">
@@ -142,7 +141,20 @@ const lang = store.lang;
   font-size: 70px;
   font-weight: 700;
 }
-
+.home-subtitle{
+  font-size: 40px;
+  margin-top: 10px;
+}
+@media (max-width:992px) {
+  .home-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.home-subtitle{
+  font-size: 30px;
+  margin-top: 10px;
+}
+}
 .main-button {
   border: none;
   color: white;
@@ -153,8 +165,9 @@ const lang = store.lang;
 }
 
 .card {
-  width: 290px;
+  width: 490px;
   height: 554px;
+  margin-top: 14px;
   border-radius: 20px;
   background: #f5f5f5;
   position: relative;
