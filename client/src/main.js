@@ -23,8 +23,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 
 const i18n = createI18n({
-    locale: 'en',
-    fallbackLocale: 'ar',
+    locale: 'ar',
+    fallbackLocale: 'en',
     legacy:false,
     messages: {
         en:{

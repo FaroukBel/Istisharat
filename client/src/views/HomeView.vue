@@ -17,12 +17,12 @@ const lang = store.lang;
         <div class="row">
           <div class="col-md-6 d-flex flex-column align justify-content-center">
             <h1 class="home-title">{{ $t("HomeTitle", {}, { locale: lang }) }}</h1>
-            <h2 class="home-subtitle" >{{ $t("HomeTitle2", {}, { locale: lang }) }}</h2>
+            <h2 class="home-subtitle">{{ $t("HomeTitle2", {}, { locale: lang }) }}</h2>
             <button class="main-button" style="margin-top: 40px;">
               {{ $t("HomeButtom", {}, { locale: lang }) }}
             </button>
           </div>
-          <div class="col-md-6 d-flex align-items-center ">
+          <div class="col-sm-4 col-md-6 d-flex align-items-center justify-content-end ">
             <img src="../assets/img/svg/therapy-home.svg" style="max-width: 700px;" />
           </div>
 
@@ -31,12 +31,87 @@ const lang = store.lang;
     </section>
 
     <section>
+
+      <div class="container px-4">
+        <div class="row text-center">
+            <h2><strong>Find your speacialist in 3 easy steps</strong></h2>
+        </div>
+        <div class="row">
+          <div class="px-2 col-lg-4 col-md-4 .col-sm-12">
+            <div class="card">
+            <div class="box">
+              <div class="content">
+                <h2>01</h2>
+                <h3>Sign-up as a customer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
+                  inventore?
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+          </div>
+      
+          <div class="px-2 col-lg-4 col-md-4 .col-sm-12">
+
+          <div class="card  ">
+            <div class="box">
+              <div class="content">
+                <h2>02</h2>
+                <h3>Card Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
+                  inventore?
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="px-2 col-lg-4 col-md-4 .col-sm-12">
+
+          <div class="card  ">
+            <div class="box">
+              <div class="content">
+                <h2>03</h2>
+                <h3>Card Three</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
+                  inventore?
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="family-therapy-section my-5 d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class=" col-md-6 col-lg-6">
+            <h3>Family therapy</h3>
+            <p>Meet experienced therapists who will walk with you on your journey. Our website connects you with skilled
+              professionals in family therapy. These experts help improve understanding and communication in your family.
+              With their guidance, you'll work together to solve problems and get closer as a family. Join hands with our
+              therapists to make your family bonds stronger and happier.</p>
+            <button class="service-button">Find your therapists</button>
+          </div>
+          <div class="group-therapy-img col-md-6 col-lg-6">
+            <img src="../assets/img/svg/happy-family.svg" alt="Group therapy">
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <section class="specialist-section">
       <div class="d-flex justify-content-center my-5">
         <h3><strong> {{ $t("section2Title", {}, { locale: lang }) }}</strong></h3>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center">
             <div class="card">
               <div class="card-head d-flex align-items-center ">
                 <div class="specialist-img">
@@ -51,14 +126,16 @@ const lang = store.lang;
               </div>
 
               <div class="card-details">
-                <p class="text-body">Description Lorem Ipsum Description Lorem Ipsum Description Lorem Ipsum Description
-                  Lorem Ipsum </p>
+                <p class="text-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum necessitatibus iusto
+                  labore sequi, totam reprehenderit quos? Numquam, nostrum blanditiis quasi, rem, eaque tempora est sint
+                  esse iste officia molestias quidem!</p>
 
               </div>
               <button class="card-button">More info</button>
             </div>
           </div>
-          <div class="col-md-4 col-lg-3 d-flex justify-content-center">
+
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center">
             <div class="card">
               <div class="card-head d-flex align-items-center ">
                 <div class="specialist-img">
@@ -73,20 +150,19 @@ const lang = store.lang;
                 </div>
               </div>
               <div class="card-details">
-                <p class="text-body">Description Lorem Ipsum Description Lorem Ipsum Description Lorem Ipsum Description
-                  Lorem Ipsum </p>
+                <p class="text-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam accusamus
+                  reiciendis cupiditate minima architecto esse deleniti. Sit vitae nostrum unde sunt reiciendis a
+                  dignissimos sint commodi, natus expedita fugit optio.</p>
 
               </div>
               <button class="card-button">More info</button>
             </div>
           </div>
-          <div class="col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center">
             <div class="card">
               <div class="card-head d-flex align-items-center ">
                 <div class="specialist-img">
                   <img src="" />
-
-
                 </div>
                 <div>
                   <p class="text-title mx-4">Name</p>
@@ -95,14 +171,15 @@ const lang = store.lang;
                 </div>
               </div>
               <div class="card-details">
-                <p class="text-body">Description Lorem Ipsum Description Lorem Ipsum Description Lorem Ipsum Description
-                  Lorem Ipsum </p>
+                <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque reprehenderit quia
+                  laboriosam, est vel quidem libero dolorum neque sit. Harum dicta pariatur assumenda ab soluta et
+                  voluptatibus repellendus veniam temporibus.</p>
 
               </div>
               <button class="card-button">More info</button>
             </div>
           </div>
-          <div class="col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center">
             <div class="card">
               <div class="card-head d-flex align-items-center ">
                 <div class="specialist-img">
@@ -118,8 +195,9 @@ const lang = store.lang;
               </div>
 
               <div class="card-details">
-                <p class="text-body">Description Lorem Ipsum Description Lorem Ipsum Description Lorem Ipsum Description
-                  Lorem Ipsum </p>
+                <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ab exercitationem
+                  ipsam vero nobis expedita unde. Impedit incidunt veritatis animi aperiam non deserunt et accusamus,
+                  nobis distinctio voluptate commodi quia.</p>
               </div>
               <button class="card-button">More info</button>
             </div>
@@ -127,6 +205,135 @@ const lang = store.lang;
         </div>
       </div>
     </section>
+
+    <section class="group-therapy-section my-5 d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class=" col-md-6 col-lg-6">
+            <h3>Group therapy</h3>
+            <p>Meet experienced therapists who will walk with you on your journey. Our website connects you with skilled
+              professionals in family therapy. These experts help improve understanding and communication in your family.
+              With their guidance, you'll work together to solve problems and get closer as a family. Join hands with our
+              therapists to make your family bonds stronger and happier.</p>
+            <button>More info</button>
+          </div>
+          <div class="group-therapy-img col-md-6 col-lg-6">
+            <img src="../assets/img/svg/group-therapy.svg" alt="Group therapy">
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <section class="specialist-section">
+      <div class="d-flex justify-content-center my-5">
+        <h3><strong> {{ $t("section2Title", {}, { locale: lang }) }}</strong></h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center">
+            <div class="card">
+              <div class="card-head d-flex align-items-center ">
+                <div class="specialist-img">
+                  <img src="" />
+
+                </div>
+                <div>
+                  <p class="text-title mx-4">Name</p>
+                  <p class="mx-4">Speciality</p>
+
+                </div>
+              </div>
+
+              <div class="card-details">
+                <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nulla quaerat nisi,
+                  magnam accusamus nihil dolorum aliquam ex. Laudantium commodi obcaecati quam nemo aut officiis dolores!
+                  Harum rem culpa sint!</p>
+
+              </div>
+              <button class="card-button">More info</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center">
+            <div class="card">
+              <div class="card-head d-flex align-items-center ">
+                <div class="specialist-img">
+                  <img src="" />
+
+
+                </div>
+                <div>
+                  <p class="text-title mx-4">Name</p>
+                  <p class="mx-4">Speciality</p>
+
+                </div>
+              </div>
+              <div class="card-details">
+                <p class="text-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum voluptas, saepe
+                  officia sint consequuntur reprehenderit totam vitae. Repellendus eligendi, laborum asperiores corporis
+                  accusamus id pariatur odio nesciunt quo modi ipsum.</p>
+
+              </div>
+              <button class="card-button">More info</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center">
+            <div class="card">
+              <div class="card-head d-flex align-items-center ">
+                <div class="specialist-img">
+                  <img src="" />
+
+
+                </div>
+                <div>
+                  <p class="text-title mx-4">Name</p>
+                  <p class="mx-4">Speciality</p>
+
+                </div>
+              </div>
+              <div class="card-details">
+                <p class="text-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, officia! Nihil
+                  alias dignissimos blanditiis temporibus ducimus at quidem obcaecati, tempora cumque iusto sunt, eaque
+                  eum libero architecto voluptate laboriosam ullam.</p>
+
+              </div>
+              <button class="card-button">More info</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center">
+            <div class="card">
+              <div class="card-head d-flex align-items-center ">
+                <div class="specialist-img">
+                  <img src="" />
+
+
+                </div>
+                <div>
+                  <p class="text-title mx-4">Name</p>
+                  <p class="mx-4">Speciality</p>
+
+                </div>
+              </div>
+
+              <div class="card-details">
+                <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam obcaecati velit
+                  nemo necessitatibus odio quidem, minus dolores tempora. Esse veniam voluptate ut illo quas quam
+                  blanditiis modi iusto quaerat. Dolore?</p>
+              </div>
+              <button class="card-button">More info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="group-therapy-section">
+      <div class="w-100">
+
+
+      </div>
+    </section>
+
+
 
 
   </main>
@@ -141,20 +348,24 @@ const lang = store.lang;
   font-size: 70px;
   font-weight: 700;
 }
-.home-subtitle{
+
+.home-subtitle {
   font-size: 40px;
   margin-top: 10px;
 }
+
 @media (max-width:992px) {
   .home-title {
-  font-size: 40px;
-  font-weight: 700;
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .home-subtitle {
+    font-size: 30px;
+    margin-top: 10px;
+  }
 }
-.home-subtitle{
-  font-size: 30px;
-  margin-top: 10px;
-}
-}
+
 .main-button {
   border: none;
   color: white;
@@ -165,14 +376,14 @@ const lang = store.lang;
 }
 
 .card {
-  width: 490px;
+  position: relative;
   height: 554px;
   margin-top: 14px;
-  border-radius: 20px;
+  border-radius: 30px !important;
   background: #f5f5f5;
   position: relative;
   padding: 1.8rem;
-  border: 2px solid #c3c6ce;
+  border: 1px solid #c3c6ce;
   transition: 0.5s ease-out;
   overflow: visible;
 }
@@ -201,6 +412,13 @@ const lang = store.lang;
   transition: 0.3s ease-out;
 }
 
+.card h2{
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 6rem;
+  color: rgba(0, 0, 0, 0.138);
+}
 .text-body {
   color: rgb(134, 134, 134);
 }
@@ -230,4 +448,38 @@ const lang = store.lang;
   border-radius: 9990px;
   background-color: black;
 }
-</style>
+
+.specialist-section {
+  height: 100%;
+}
+
+.group-therapy-section {
+
+  width: 100%;
+  height: 70vh;
+  background-color: white;
+}
+
+.family-therapy-section {
+
+  width: 100%;
+  height: 70vh;
+  background-color: white;
+
+}
+
+.home-service-card {
+  width: 80%;
+  height: 250px;
+  padding: 20px;
+
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.service-button {
+  background-color: #008bf8;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+}</style>
