@@ -3,6 +3,8 @@ import { useStore } from '../stores/langStore'; // Update the path accordingly
 import { onMounted, ref } from 'vue';
 import { VCard, VCardText, VCardTitle } from 'vuetify/components/VCard'
 
+
+
 const store = useStore();
 const lang = store.lang;
 
@@ -33,20 +35,21 @@ const lang = store.lang;
     <section>
 
       <div class="container px-4">
-        <div class="row text-center">
+        <div class="row find-title text-center">
             <h2><strong>Find your speacialist in 3 easy steps</strong></h2>
         </div>
         <div class="row">
           <div class="px-2 col-lg-4 col-md-4 .col-sm-12">
             <div class="card">
             <div class="box">
-              <div class="content">
+              <div class="first-step-content">
                 <h2>01</h2>
                 <h3>Sign-up as a customer</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
                   inventore?
                 </p>
                 <a href="#">Read More</a>
+                <img src="../assets/img/svg/sign-up.svg"/>
               </div>
             </div>
           </div>
@@ -56,13 +59,15 @@ const lang = store.lang;
 
           <div class="card  ">
             <div class="box">
-              <div class="content">
+              <div class="second-step-content">
                 <h2>02</h2>
-                <h3>Card Two</h3>
+                <h3>Book your session</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
                   inventore?
                 </p>
                 <a href="#">Read More</a>
+                <img src="../assets/img/svg/booking-svg.svg"/>
+
               </div>
             </div>
           </div>
@@ -71,13 +76,15 @@ const lang = store.lang;
 
           <div class="card  ">
             <div class="box">
-              <div class="content">
+              <div class="third-step-content">
                 <h2>03</h2>
-                <h3>Card Three</h3>
+                <h3>Start your journey</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
                   inventore?
                 </p>
                 <a href="#">Read More</a>
+                <img src="../assets/img/svg/journey.svg"/>
+
               </div>
             </div>
           </div>
@@ -354,17 +361,7 @@ const lang = store.lang;
   margin-top: 10px;
 }
 
-@media (max-width:992px) {
-  .home-title {
-    font-size: 40px;
-    font-weight: 700;
-  }
 
-  .home-subtitle {
-    font-size: 30px;
-    margin-top: 10px;
-  }
-}
 
 .main-button {
   border: none;
@@ -417,7 +414,7 @@ const lang = store.lang;
   top: -10px;
   right: 30px;
   font-size: 6rem;
-  color: rgba(0, 0, 0, 0.138);
+  color: rgba(0, 0, 0, 0.064);
 }
 .text-body {
   color: rgb(134, 134, 134);
@@ -482,4 +479,54 @@ const lang = store.lang;
   border-radius: 20px;
   padding: 10px;
   color: white;
-}</style>
+}
+
+.first-step-content img{
+position: absolute;
+top: -100px;
+left: 0;
+width: 100px;
+}
+
+.second-step-content img{
+position: absolute;
+bottom: -70px;
+right: 0;
+width: 150px;
+}
+.third-step-content img{
+position: absolute;
+top: -88px;
+right: 0;
+width: 100px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:992px) {
+  .home-title {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .find-title{
+  margin-bottom: 100px;
+}
+
+  .home-subtitle {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .third-step-content img{
+position: absolute;
+top: 96px;
+right: 0;
+width: 100px;
+}
+
+}
+
+</style>
