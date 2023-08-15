@@ -8,14 +8,10 @@ import router from './router'
 import { createI18n } from 'vue-i18n'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
 
-const vuetify = createVuetify({
-  components,
-  directives,
-})
+import BalmUI from 'balm-ui'; // Official Google Material Components
+import BalmUIPlus from 'balm-ui-plus'; // BalmJS Team Material Components
+import 'balm-ui-css';
 
 // Import Bootstrap and BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -59,8 +55,9 @@ const i18n = createI18n({
   })
   
 const app = createApp(App).use(i18n)
-
+app.use(BalmUI);
+app.use(BalmUIPlus);
 app.use(createPinia())
-app.use(router).use(BootstrapVue).use(vuetify)
+app.use(router).use(BootstrapVue)
 
 app.mount('#app')

@@ -3,8 +3,6 @@ import { useStore } from '../stores/langStore'; // Update the path accordingly
 import { onMounted, ref } from 'vue';
 import { VCard, VCardText, VCardTitle } from 'vuetify/components/VCard'
 
-
-
 const store = useStore();
 const lang = store.lang;
 
@@ -14,10 +12,34 @@ const lang = store.lang;
 <template>
   <main :class="{ 'rtl': lang === 'ar', 'arabic-font': lang === 'ar' }" class="english-font">
     <section>
-
+      <div class="main-background-img">
+         
+        </div>
       <div class="container home-container">
+      
         <div class="row">
-          <div class="col-md-6 d-flex flex-column align justify-content-center">
+          <div>
+            <h1 class="home-title">{{ $t("HomeTitle", {}, { locale: lang }) }}</h1>
+            <h2 class="home-subtitle">{{ $t("HomeTitle2", {}, { locale: lang }) }}</h2>
+          </div>
+          <div class="container inner-main-container">
+            <div class="row">
+              <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
+                <h3>Search by specialty or interests</h3>
+                <ui-textfield placeholder="Start typing a specialty" outlined>
+                  
+                </ui-textfield>
+              </div>
+
+              <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
+                <h3>Specialist's name</h3>
+                <ui-textfield placeholder="Search for specialists by name" outlined>
+
+</ui-textfield>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-6 d-flex flex-column align justify-content-center">
             <h1 class="home-title">{{ $t("HomeTitle", {}, { locale: lang }) }}</h1>
             <h2 class="home-subtitle">{{ $t("HomeTitle2", {}, { locale: lang }) }}</h2>
             <button class="main-button" style="margin-top: 40px;">
@@ -26,7 +48,7 @@ const lang = store.lang;
           </div>
           <div class="col-sm-4 col-md-6 d-flex align-items-center justify-content-end ">
             <img src="../assets/img/svg/therapy-home.svg" style="max-width: 700px;" />
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -36,58 +58,58 @@ const lang = store.lang;
 
       <div class="container px-4">
         <div class="row find-title text-center">
-            <h2><strong>Find your speacialist in 3 easy steps</strong></h2>
+          <h2><strong>Find your speacialist in 3 easy steps</strong></h2>
         </div>
         <div class="row">
           <div class="px-2 col-lg-4 col-md-4 .col-sm-12">
             <div class="card">
-            <div class="box">
-              <div class="first-step-content">
-                <h2>01</h2>
-                <h3>Sign-up as a customer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
-                  inventore?
-                </p>
-                <a href="#">Read More</a>
-                <img src="../assets/img/svg/sign-up.svg"/>
+              <div class="box">
+                <div class="first-step-content">
+                  <h2>01</h2>
+                  <h3>Sign-up as a customer</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
+                    inventore?
+                  </p>
+                  <a href="#">Read More</a>
+                  <img src="../assets/img/svg/sign-up.svg" />
+                </div>
               </div>
             </div>
           </div>
-          </div>
-      
+
           <div class="px-2 col-lg-4 col-md-4 .col-sm-12">
 
-          <div class="card  ">
-            <div class="box">
-              <div class="second-step-content">
-                <h2>02</h2>
-                <h3>Book your session</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
-                  inventore?
-                </p>
-                <a href="#">Read More</a>
-                <img src="../assets/img/svg/booking-svg.svg"/>
+            <div class="card  ">
+              <div class="box">
+                <div class="second-step-content">
+                  <h2>02</h2>
+                  <h3>Book your session</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
+                    inventore?
+                  </p>
+                  <a href="#">Read More</a>
+                  <img src="../assets/img/svg/booking-svg.svg" />
 
+                </div>
               </div>
             </div>
-          </div>
           </div>
           <div class="px-2 col-lg-4 col-md-4 .col-sm-12">
 
-          <div class="card  ">
-            <div class="box">
-              <div class="third-step-content">
-                <h2>03</h2>
-                <h3>Start your journey</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
-                  inventore?
-                </p>
-                <a href="#">Read More</a>
-                <img src="../assets/img/svg/journey.svg"/>
+            <div class="card  ">
+              <div class="box">
+                <div class="third-step-content">
+                  <h2>03</h2>
+                  <h3>Start your journey</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
+                    inventore?
+                  </p>
+                  <a href="#">Read More</a>
+                  <img src="../assets/img/svg/journey.svg" />
 
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -349,8 +371,20 @@ const lang = store.lang;
 <style>
 .home-container {
   margin-bottom: 200px;
+  position: relative;
 }
-
+.main-background-img{
+  position: absolute;
+top:0;
+  left: 0;
+  width: 100%;
+  height: 500px !important;
+  z-index: 0;
+  background-image: url("../assets/img/main-img-happy-family.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .home-title {
   font-size: 70px;
   font-weight: 700;
@@ -361,6 +395,15 @@ const lang = store.lang;
   margin-top: 10px;
 }
 
+.inner-main-container {
+
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.134);
+  height: 400px;
+
+
+}
 
 
 .main-button {
@@ -409,13 +452,14 @@ const lang = store.lang;
   transition: 0.3s ease-out;
 }
 
-.card h2{
+.card h2 {
   position: absolute;
   top: -10px;
   right: 30px;
   font-size: 6rem;
   color: rgba(0, 0, 0, 0.064);
 }
+
 .text-body {
   color: rgb(134, 134, 134);
 }
@@ -481,24 +525,25 @@ const lang = store.lang;
   color: white;
 }
 
-.first-step-content img{
-position: absolute;
-top: -100px;
-left: 0;
-width: 100px;
+.first-step-content img {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100px;
 }
 
-.second-step-content img{
-position: absolute;
-bottom: -70px;
-right: 0;
-width: 150px;
+.second-step-content img {
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+  width: 150px;
 }
-.third-step-content img{
-position: absolute;
-top: -88px;
-right: 0;
-width: 100px;
+
+.third-step-content img {
+  position: absolute;
+  top: -88px;
+  right: 0;
+  width: 100px;
 }
 
 
@@ -509,9 +554,10 @@ width: 100px;
     font-size: 40px;
     font-weight: 700;
   }
-  .find-title{
-  margin-bottom: 100px;
-}
+
+  .find-title {
+    margin-bottom: 100px;
+  }
 
   .home-subtitle {
     font-size: 30px;
@@ -520,13 +566,12 @@ width: 100px;
 }
 
 @media (max-width: 767px) {
-  .third-step-content img{
-position: absolute;
-top: 96px;
-right: 0;
-width: 100px;
-}
+  .third-step-content img {
+    position: absolute;
+    top: 96px;
+    right: 0;
+    width: 100px;
+  }
 
 }
-
 </style>
