@@ -1,11 +1,21 @@
 <script setup>
 import { useStore } from '../stores/langStore'; // Update the path accordingly
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, computed, watch } from 'vue';
 import { VCard, VCardText, VCardTitle } from 'vuetify/components/VCard'
 
 const store = useStore();
 const lang = store.lang;
 
+
+const input = ref('');
+const selected = ref(null);
+const options = [
+          { value: null, text: 'Please select some item' },
+          { value: 'a', text: 'This is First option' },
+          { value: 'b', text: 'Default Selected Option' },
+          { value: 'c', text: 'This is another option' },
+          { value: 'd', text: 'This one is disabled', disabled: true }
+        ];
 
 </script>
 
@@ -13,29 +23,48 @@ const lang = store.lang;
   <main :class="{ 'rtl': lang === 'ar', 'arabic-font': lang === 'ar' }" class="english-font">
     <section>
       <div class="main-background-img">
-         
-        </div>
+
+      </div>
       <div class="container home-container">
-      
+
         <div class="row">
           <div>
             <h1 class="home-title">{{ $t("HomeTitle", {}, { locale: lang }) }}</h1>
             <h2 class="home-subtitle">{{ $t("HomeTitle2", {}, { locale: lang }) }}</h2>
           </div>
-          <div class="container inner-main-container">
+          <div class="container inner-main-container mt-5">
             <div class="row">
               <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
-                <h3>Search by specialty or interests</h3>
-                <ui-textfield placeholder="Start typing a specialty" outlined>
-                  
-                </ui-textfield>
+                <h4>Search by specialty or interests</h4>
+                <b-form-input class="p-2" v-model="input" placeholder="Start typing a specialty"></b-form-input>
+
               </div>
 
               <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
-                <h3>Specialist's name</h3>
-                <ui-textfield placeholder="Search for specialists by name" outlined>
+                <h4>Specialist's name</h4>
+                <b-form-input class="p-2" v-model="input" placeholder="Search for specialists by name"></b-form-input>
 
-</ui-textfield>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
+                <h4>Fees</h4>
+                <b-form-select class="border rounded p-2" v-model="selected"  :options="options"></b-form-select>
+
+              </div>
+
+
+              <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
+                <h4>Availability</h4>
+                <b-form-input class="p-2" v-model="input" placeholder="Search for specialists by name"></b-form-input>
+
+                <div class="w-100 d-flex justify-content-end">
+                  <button class="main-button w-100" style="margin-top: 40px;">
+                    {{ $t("HomeButtom", {}, { locale: lang }) }}
+                  </button>
+                </div>
+
               </div>
             </div>
           </div>
@@ -373,18 +402,20 @@ const lang = store.lang;
   margin-bottom: 200px;
   position: relative;
 }
-.main-background-img{
+
+.main-background-img {
   position: absolute;
-top:0;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 500px !important;
+  height: 600px !important;
   z-index: 0;
   background-image: url("../assets/img/main-img-happy-family.avif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .home-title {
   font-size: 70px;
   font-weight: 700;
@@ -400,7 +431,6 @@ top:0;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.134);
-  height: 400px;
 
 
 }
