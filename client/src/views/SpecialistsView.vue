@@ -31,7 +31,7 @@ const intrestOptions = [
 const durationOptions = ["30 min.", "60 min."];
 const genderOptions = ["Female", "Male"];
 
-const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2", "desc": "lorem ipsum" }, { "name": "test3", "desc": "lorem ipsum" }, { "name": "test4", "desc": "lorem ipsum" }, { "name": "test5", "desc": "lorem ipsum" }];
+const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2", "desc": "lorem ipsum" }, { "name": "test3", "desc": "lorem ipsum" }, { "name": "test4", "desc": "lorem ipsum" }, { "name": "test5", "desc": "lorem ipsum" }, { "name": "test5", "desc": "lorem ipsum" }, { "name": "test5", "desc": "lorem ipsum" }, { "name": "test5", "desc": "lorem ipsum" }, { "name": "test5", "desc": "lorem ipsum" }];
 </script>
 
 <template>
@@ -40,7 +40,7 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
             <h1 style="font-weight: 700;">Find your specialists here</h1>
             <div class="row">
                 <div class="d-flex justify-content-between w-100 mt-5 p-0">
-                    <b-input-group  class="w-50 d-flex align-items-center justify-content-between ">
+                    <b-input-group class="w-50 d-flex align-items-center justify-content-between ">
                         <b-icon-search style="width: 30px;"></b-icon-search>
                         <b-form-input></b-form-input>
                     </b-input-group>
@@ -58,7 +58,7 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
                     <div class="row filter p-3">
                         <h5>Availability</h5>
                         <b-form-group v-slot="{ ariaDescribedby }">
-                            <b-form-checkbox-group class="availability-group" id="checkbox-group-1"
+                            <b-form-checkbox-group class="checkbox-group" id="checkbox-group-1"
                                 v-model="availabilitySelected" :options="availabilityOptions" name="buttons-1"
                                 :aria-describedby="ariaDescribedby"></b-form-checkbox-group>
                         </b-form-group>
@@ -81,37 +81,54 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
                     <div class="row filter p-3">
                         <h5>Duration</h5>
                         <b-form-group v-slot="{ ariaDescribedby }">
-                            <b-form-checkbox-group id="checkbox-group-duration" v-model="durationSelected"
-                                :options="durationOptions" name="buttons-1"
+                            <b-form-checkbox-group class="checkbox-group" id="checkbox-group-duration"
+                                v-model="durationSelected" :options="durationOptions" name="buttons-1"
                                 :aria-describedby="ariaDescribedby"></b-form-checkbox-group>
                         </b-form-group>
                     </div>
                     <div class="row filter p-3">
                         <h5>Gender</h5>
                         <b-form-group v-slot="{ ariaDescribedby }">
-                            <b-form-checkbox-group id="checkbox-group-gender" v-model="genderSelected"
-                                :options="genderOptions" name="buttons-1"
+                            <b-form-checkbox-group class="checkbox-group" id="checkbox-group-gender"
+                                v-model="genderSelected" :options="genderOptions" name="buttons-1"
                                 :aria-describedby="ariaDescribedby"></b-form-checkbox-group>
                         </b-form-group>
                     </div>
                 </div>
                 <div class="col">
+
                     <div v-for="(row, index) in specRows" :key="index" class="row">
-                        <div v-if="specRows[index * 2]" class="col-6 spec-card">
-                            <div class="inner-spec-card p-3">
-                                <h5>{{ specRows[index * 2].name }}</h5>
-                                <p>{{ specRows[index * 2].desc }}</p>
+
+                        <div v-if="specRows[index * 2]" class="col-6  skeleton">
+                            <div class="inner-spec-card ">
+                                <div class="skeleton-left  flex1">
+                                    <div class="square circle"></div>
+                                </div>
+                                <div class="skeleton-right flex2">
+                                    <div class="line h17 w40 m10"></div>
+                                    <div class="line"></div>
+                                    <div class="line h8 w50"></div>
+                                    <div class="line  w75"></div>
+                                </div>
                             </div>
+
                         </div>
-                        <div v-if="specRows[index * 2 + 1]" class="col-6 spec-card pr-0">
-                            <div class="inner-spec-card p-3">
-                                <!-- Content for the second card -->
-                                <h5>{{ specRows[index * 2 + 1].name }}</h5>
-                                <p>{{ specRows[index * 2 + 1].desc }}</p>
+                        <div v-if="specRows[index * 2 + 1]" class="col-6  skeleton">
+                            <div class="inner-spec-card ">
+                                <div class="skeleton-left flex1">
+                                    <div class="square circle"></div>
+                                </div>
+                                <div class="skeleton-right flex2">
+                                    <div class="line h17 w40 m10"></div>
+                                    <div class="line"></div>
+                                    <div class="line h8 w50"></div>
+                                    <div class="line  w75"></div>
+                                </div>
                             </div>
 
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -126,10 +143,11 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
     }
 }
 
-.spec-card {
-    margin-bottom: 20px;
-
+.checkbox-group span {
+    margin-left: 10px;
 }
+
+
 
 .fees-group {
     display: flex;
@@ -154,7 +172,11 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
 }
 
 .inner-spec-card {
+    width: 100%;
     background-color: white;
+    /* box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12); */
+    padding: 10px;
+    border: 1px solid rgba(194, 194, 194, 0.468);
 
     border-radius: 10px;
     height: 200px;
@@ -170,31 +192,13 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
     margin-bottom: 20px;
 }
 
-.filter h5{
+.filter h5 {
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 
-.categ-button {
-    background-color: transparent;
-    color: black;
-    border: none;
-    text-align: left;
-    transition: 0.3s ease-in-out !important;
-    border-radius: 0;
 
-
-}
-
-.categ-button:hover {
-    border: none !important;
-
-    border-bottom: 1px solid rgb(0, 174, 194) !important;
-    background-color: rgb(251, 251, 251) !important;
-    color: black;
-
-}
 
 .availability-group .btn {
     display: flex;
