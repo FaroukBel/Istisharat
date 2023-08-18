@@ -3,6 +3,7 @@
 import { useStore } from '../stores/langStore'; // Update the path accordingly
 import { onMounted, ref, computed, watch } from 'vue';
 import { VCard, VCardText, VCardTitle } from 'vuetify/components/VCard'
+import { BIconSearch } from 'bootstrap-vue';
 
 const store = useStore();
 const lang = store.lang;
@@ -38,8 +39,9 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
         <div class="container main-content">
             <h1 style="font-weight: 700;">Find your specialists here</h1>
             <div class="row">
-                <div class="d-flex justify-content-between w-100 mt-5">
-                    <b-input-group prepend="Search" class="w-50">
+                <div class="d-flex justify-content-between w-100 mt-5 p-0">
+                    <b-input-group  class="w-50 d-flex align-items-center justify-content-between ">
+                        <b-icon-search style="width: 30px;"></b-icon-search>
                         <b-form-input></b-form-input>
                     </b-input-group>
 
@@ -101,7 +103,7 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
                                 <p>{{ specRows[index * 2].desc }}</p>
                             </div>
                         </div>
-                        <div v-if="specRows[index * 2 + 1]" class="col-6 spec-card">
+                        <div v-if="specRows[index * 2 + 1]" class="col-6 spec-card pr-0">
                             <div class="inner-spec-card p-3">
                                 <!-- Content for the second card -->
                                 <h5>{{ specRows[index * 2 + 1].name }}</h5>
@@ -114,6 +116,7 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
             </div>
         </div>
     </div>
+    <Footer></Footer>
 </template>
   
 <style>
@@ -153,7 +156,6 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
 .inner-spec-card {
     background-color: white;
 
-    padding: 10px;
     border-radius: 10px;
     height: 200px;
 
