@@ -46,8 +46,8 @@ const toggleLanguage = () => {
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="w-100 justify-content-center">
-            <b-nav-item href="#">{{ $t("home", {}, { locale: lang }) }}</b-nav-item>
-            <b-nav-item href="#">{{ $t("itemMenu2", {}, { locale: lang }) }}</b-nav-item>
+            <b-nav-item href="/">{{ $t("home", {}, { locale: lang }) }}</b-nav-item>
+            <b-nav-item href="/specialists">{{ $t("itemMenu2", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="#">{{ $t("itemMenu3", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="#">{{ $t("itemMenu4", {}, { locale: lang }) }}</b-nav-item>
           </b-navbar-nav>

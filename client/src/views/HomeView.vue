@@ -7,7 +7,11 @@ const store = useStore();
 const lang = store.lang;
 
 
-const input = ref('');
+const specialtySearch = ref('');
+const specNameSearch = ref('');
+const startDateSearch = ref('');
+const endDateSearch = ref('');
+
 const selected = ref(null);
 const options = [
           { value: null, text: 'Please select some item' },
@@ -36,13 +40,13 @@ const options = [
             <div class="row">
               <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
                 <h4>Search by specialty or interests</h4>
-                <b-form-input class="p-2" v-model="input" placeholder="Start typing a specialty"></b-form-input>
+                <b-form-input class="p-2" v-model="specialtySearch" placeholder="Start typing a specialty"></b-form-input>
 
               </div>
 
               <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
                 <h4>Specialist's name</h4>
-                <b-form-input class="p-2" v-model="input" placeholder="Search for specialists by name"></b-form-input>
+                <b-form-input class="p-2" v-model="specNameSearch" placeholder="Search for specialists by name"></b-form-input>
 
 
               </div>
@@ -57,8 +61,11 @@ const options = [
 
               <div class="col-sm-12 col-lg-6 p-4 d-flex flex-column">
                 <h4>Availability</h4>
-                <b-form-input class="p-2" v-model="input" placeholder="Search for specialists by name"></b-form-input>
-
+                <div class="row">
+                  <b-form-datepicker id="startdate-datepicker"  type="text" locale="en-US" v-model="startDateSearch" class="mb-2 col "></b-form-datepicker>
+                <b-form-datepicker id="endate-datepicker" v-model="endDateSearch" class="mb-2 col ml-2"></b-form-datepicker>
+                </div>
+                
                 <div class="w-100 d-flex justify-content-end">
                   <button class="main-button w-100" style="margin-top: 40px;">
                     {{ $t("HomeButtom", {}, { locale: lang }) }}
@@ -408,7 +415,7 @@ const options = [
   top: 0;
   left: 0;
   width: 100%;
-  height: 600px !important;
+  height: 550px !important;
   z-index: 0;
   background-image: url("../assets/img/main-img-happy-family.avif");
   background-position: center;
@@ -431,7 +438,7 @@ const options = [
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.134);
-
+  width: 1000px !important;
 
 }
 
@@ -442,7 +449,7 @@ const options = [
   background-color: #5479f7;
   border-radius: 15px;
   padding: 10px;
-  max-width: 300px;
+  max-width:200px;
 }
 
 .card {
