@@ -49,7 +49,7 @@ const toggleLanguage = () => {
             <b-nav-item href="/">{{ $t("home", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="/specialists">{{ $t("itemMenu2", {}, { locale: lang }) }}</b-nav-item>
             <b-nav-item href="#">{{ $t("itemMenu3", {}, { locale: lang }) }}</b-nav-item>
-            <b-nav-item href="#">{{ $t("itemMenu4", {}, { locale: lang }) }}</b-nav-item>
+            <b-nav-item href="/about">{{ $t("itemMenu4", {}, { locale: lang }) }}</b-nav-item>
           </b-navbar-nav>
 
           <b-navbar-nav class="ml-auto w-100 justify-content-end ">
