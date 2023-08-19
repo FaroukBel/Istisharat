@@ -37,12 +37,12 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
 <template>
     <div :class="{ 'rtl': lang === 'ar', 'arabic-font': lang === 'ar' }" class="english-font">
         <div class="container main-content">
-            <h1 style="font-weight: 700;">Find your specialists here</h1>
+            <h1 style="font-weight: 700; color: rgb(0, 185, 121);">Find your specialists here</h1>
             <div class="row">
                 <div class="d-flex justify-content-between w-100 mt-5 p-0">
                     <b-input-group class="w-50 d-flex align-items-center justify-content-between ">
                         <b-icon-search style="width: 30px;"></b-icon-search>
-                        <b-form-input></b-form-input>
+                        <b-form-input placeholder="Search your specialist by name"></b-form-input>
                     </b-input-group>
 
                     <b-form-group class="fees-group" v-slot="{ ariaDescribedby }">
@@ -162,7 +162,7 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
 }
 
 .radio-fees .active {
-    background-color: rgb(120, 120, 120) !important;
+    background-color: rgb(0, 185, 121) !important;
     color: rgb(255, 255, 255);
 }
 
@@ -195,6 +195,7 @@ const specRows = [{ "name": "test1", "desc": "lorem ipsum" }, { "name": "test2",
 .filter h5 {
     font-weight: 600;
     margin-bottom: 20px;
+    color: rgb(0, 185, 121);
 }
 
 

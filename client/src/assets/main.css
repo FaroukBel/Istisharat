@@ -39,7 +39,7 @@ footer {
   padding:0px 0px 15px 0px;
   max-width: 300px;
   width: 100%;
-
+  padding-right: 0 !important;
   display: flex;
   justify-content: center;
   align-items: center;
