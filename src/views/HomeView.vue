@@ -402,6 +402,7 @@ const options = [
 
 
   </main>
+  <Footer></Footer>
 </template>
 
 <style>
